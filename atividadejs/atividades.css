@@ -5,27 +5,34 @@
 
 body {
   font-family: 'Helvetica', sans-serif;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  background: radial-gradient(circle at center, #101010 0%, #000000 100%);
   min-height: 100vh;
   color: #e8e8e8;
 }
 
-.fundo { min-height: 100vh; }
+.fundo { min-height: 100vh;
+ }
 
 /* =============================================
    NAVEGAÇÃO
    ============================================= */
+
 .topo {
-  height: 5vh;
-  background: rgb(7, 7, 7);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  font-size: 1.6rem;
+    box-sizing: border-box;
+    background: rgb(7, 7, 7);
+    position: sticky;
+    margin-top: 0;
+    display: flex;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
 }
 .topo a {
   text-decoration: none;
