@@ -11,30 +11,30 @@
     --secundario: #bfbfbf;
     --destaque: #ffc400;
 }
-
-/* BASE */
 body {
     font-family: 'Helvetica Neue', sans-serif;
     background: radial-gradient(circle at center, #111 0%, #000 100%);
     color: var(--texto);
 }
-
-/* FUNDO GERAL */
+/* BASE */
 .fundo {
-    min-height: 200vh;
+    min-height: 100vh;
+ /* espaço para o topo fixo */
 }
 .topo {
     box-sizing: border-box;
-    height: 5vh;
     background: rgb(7, 7, 7);
     position: sticky;
     top: 0;
     display: flex;
+    z-index: 1000;
     align-items: center;
     justify-content: center;
     gap: 50px;
     font-size: 1.6rem;
     color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 
