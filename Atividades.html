@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividades JS</title>
+  <link rel="stylesheet" href="atividades.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<div class="fundo">
+
+  <!-- NAVEGAÇÃO -->
+  <div class="topo">    
+    <a href="../Index.html">Início</a>
+    <a href="Atividades.html">Atividades</a>
+  </div>
+
+  <main class="conteudo">
+    <h1 class="titulo-pagina">Atividades <span>Js</span></h1>
+
+    <!-- ==============================
+         ATIVIDADE 1 — MAIOR / MENOR
+    =============================== -->
+    <div class="card" style="--delay: 0.1s">
+      <div class="card-header">
+        <span class="numero-atividade">01</span>
+        <h2>Maior e Menor Valor</h2>
+      </div>
+      <p class="descricao">Digite cinco números inteiros. A função encontra o <strong>maior</strong> e o <strong>menor</strong>.</p>
+
+      <div class="inputs-grid cols-5">
+        <div class="input-grupo"><label for="mm_n1">1º</label><input type="number" id="mm_n1" placeholder="0" /></div>
+        <div class="input-grupo"><label for="mm_n2">2º</label><input type="number" id="mm_n2" placeholder="0" /></div>
+        <div class="input-grupo"><label for="mm_n3">3º</label><input type="number" id="mm_n3" placeholder="0" /></div>
+        <div class="input-grupo"><label for="mm_n4">4º</label><input type="number" id="mm_n4" placeholder="0" /></div>
+        <div class="input-grupo"><label for="mm_n5">5º</label><input type="number" id="mm_n5" placeholder="0" /></div>
+      </div>
+
+      <button class="botao" onclick="MAIOR_MENOR()">Calcular</button>
+
+      <div class="resultado dois-cols" id="mm_resultado" hidden>
+        <div class="resultado-item">
+          <span class="resultado-label">🏆 Maior</span>
+          <span class="resultado-valor" id="mm_maior">—</span>
+        </div>
+        <div class="resultado-item">
+          <span class="resultado-label">📉 Menor</span>
+          <span class="resultado-valor" id="mm_menor">—</span>
+        </div>
+      </div>
+      <p class="erro" id="mm_erro" hidden>⚠️ Preencha todos os cinco campos.</p>
+    </div>
+
+    <!-- ==============================
+         ATIVIDADE 2 — VOGAL
+    =============================== -->
+    <div class="card" style="--delay: 0.2s">
+      <div class="card-header">
+        <span class="numero-atividade">02</span>
+        <h2>Vogal ou Consoante</h2>
+      </div>
+      <p class="descricao">Digite um único caractere. A função retorna <strong>1</strong> se for vogal ou <strong>0</strong> se não for.</p>
+
+      <div class="inputs-grid cols-1">
+        <div class="input-grupo"><label for="vg_letra">Caractere</label><input type="text" id="vg_letra" placeholder="Ex: A" maxlength="1" style="text-align:center; font-size:1.8rem; text-transform:uppercase;" /></div>
+      </div>
+
+      <button class="botao" onclick="checarVogal()">Verificar</button>
+
+      <div class="resultado um-col" id="vg_resultado" hidden>
+        <div class="resultado-item">
+          <span class="resultado-valor resultado-texto" id="vg_texto"></span>
+        </div>
+      </div>
+      <p class="erro" id="vg_erro" hidden>⚠️ Digite exatamente um caractere.</p>
+    </div>
+
+    <!-- ==============================
+         ATIVIDADE 3 — LIMITES
+    =============================== -->
+    <div class="card" style="--delay: 0.3s">
+      <div class="card-header">
+        <span class="numero-atividade">03</span>
+        <h2>Pares no Intervalo</h2>
+      </div>
+      <p class="descricao">Digite os limites de um intervalo <strong>aberto</strong> (não inclui os extremos). A função lista os <strong>números pares</strong> e seu <strong>somatório</strong>.</p>
+
+      <div class="inputs-grid cols-2">
+        <div class="input-grupo"><label for="lm_li">Limite inferior</label><input type="number" id="lm_li" placeholder="Ex: 1" /></div>
+        <div class="input-grupo"><label for="lm_ls">Limite superior</label><input type="number" id="lm_ls" placeholder="Ex: 10" /></div>
+      </div>
+
+      <button class="botao" onclick="calcularLimites()">Calcular</button>
+
+      <div class="resultado dois-cols" id="lm_resultado" hidden>
+        <div class="resultado-item resultado-item--wide">
+          <span class="resultado-label">Números pares</span>
+          <span class="resultado-valor resultado-pequeno" id="lm_pares">—</span>
+        </div>
+        <div class="resultado-item">
+          <span class="resultado-label">∑ Somatório</span>
+          <span class="resultado-valor" id="lm_soma">—</span>
+        </div>
+      </div>
+      <p class="erro" id="lm_erro" hidden></p>
+    </div>
+
+    <!-- ==============================
+         ATIVIDADE 4 — ORDEM
+    =============================== -->
+    <div class="card" style="--delay: 0.4s">
+      <div class="card-header">
+        <span class="numero-atividade">04</span>
+        <h2>Ordenação Crescente</h2>
+      </div>
+      <p class="descricao">Digite três números inteiros. A função os retorna em <strong>ordem crescente</strong>.</p>
+
+      <div class="inputs-grid cols-3">
+        <div class="input-grupo"><label for="or_n1">1º número</label><input type="number" id="or_n1" placeholder="0" /></div>
+        <div class="input-grupo"><label for="or_n2">2º número</label><input type="number" id="or_n2" placeholder="0" /></div>
+        <div class="input-grupo"><label for="or_n3">3º número</label><input type="number" id="or_n3" placeholder="0" /></div>
+      </div>
+
+      <button class="botao" onclick="calcularOrdem()">Ordenar</button>
+
+      <div class="resultado um-col" id="or_resultado" hidden>
+        <div class="resultado-item">
+          <span class="resultado-label">Ordem crescente</span>
+          <span class="resultado-valor resultado-texto" id="or_texto">—</span>
+        </div>
+      </div>
+      <p class="erro" id="or_erro" hidden>⚠️ Preencha os três campos.</p>
+    </div>
+
+    <!-- ==============================
+         ATIVIDADE 5 — POSITIVO / NEGATIVO
+    =============================== -->
+    <div class="card" style="--delay: 0.5s">
+      <div class="card-header">
+        <span class="numero-atividade">05</span>
+        <h2>Positivo ou Negativo</h2>
+      </div>
+      <p class="descricao">Digite um número inteiro. A função retorna um valor <strong>booleano</strong>: <strong>true</strong> se positivo, <strong>false</strong> se negativo.</p>
+
+      <div class="inputs-grid cols-1">
+        <div class="input-grupo"><label for="pn_num">Número</label><input type="number" id="pn_num" placeholder="Ex: -7" /></div>
+      </div>
+
+      <button class="botao" onclick="calcularPosNeg()">Verificar</button>
+
+      <div class="resultado um-col" id="pn_resultado" hidden>
+        <div class="resultado-item resultado-bool">
+          <span class="resultado-emoji" id="pn_emoji">📈</span>
+          <span class="resultado-valor" id="pn_palavra">—</span>
+          <span class="resultado-label" id="pn_retorno"></span>
+        </div>
+      </div>
+      <p class="erro" id="pn_erro" hidden>⚠️ Digite um número válido.</p>
+    </div>
+
+    <!-- ==============================
+         ATIVIDADE 6 — PAR / ÍMPAR
+    =============================== -->
+    <div class="card" style="--delay: 0.6s">
+      <div class="card-header">
+        <span class="numero-atividade">06</span>
+        <h2>Par ou Ímpar</h2>
+      </div>
+      <p class="descricao">Digite um número inteiro. A função retorna um valor <strong>booleano</strong>: <strong>true</strong> se par, <strong>false</strong> se ímpar.</p>
+
+      <div class="inputs-grid cols-1">
+        <div class="input-grupo"><label for="pi_num">Número</label><input type="number" id="pi_num" placeholder="Ex: 4" /></div>
+      </div>
+
+      <button class="botao" onclick="calcularParImpar()">Verificar</button>
+
+      <div class="resultado um-col" id="pi_resultado" hidden>
+        <div class="resultado-item resultado-bool">
+          <span class="resultado-valor" id="pi_palavra">—</span>
+          <span class="resultado-label" id="pi_retorno"></span>
+        </div>
+      </div>
+      <p class="erro" id="pi_erro" hidden>⚠️ Digite um número válido.</p>
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
