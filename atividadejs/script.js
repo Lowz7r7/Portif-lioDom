@@ -214,9 +214,11 @@ function calcularPosNeg() {
 
   let emoji = ehPositivo ? "📈" : "📉";
   let palavra = ehPositivo ? "POSITIVO" : (x === 0 ? "ZERO" : "NEGATIVO");
+  let retorno = ehPositivo ? "true" : "false";
 
   document.getElementById("pn_emoji").textContent = emoji;
   document.getElementById("pn_palavra").textContent = palavra;
+  document.getElementById("pn_retorno").textContent = `Retorno booleano: ${retorno}`;
   document.getElementById("pn_resultado").hidden = false;
 }
 
@@ -247,8 +249,9 @@ function calcularParImpar() {
   let ehPar = PAR_IMPAR(x);
 
   let palavra = ehPar ? "PAR" : "ÍMPAR";
-
+  let retorno = ehPar ? "true" : "false";
 
   document.getElementById("pi_palavra").textContent = palavra;
+  document.getElementById("pi_retorno").textContent = `Retorno booleano: ${retorno}`;
   document.getElementById("pi_resultado").hidden = false;
 }

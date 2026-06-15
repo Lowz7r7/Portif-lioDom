@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefing</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+    <link rel="stylesheet" href="briefing.css">
+</head>
+<body>
+    <main>
+        <div class="topo">  
+    <a href="../index.html" target="_blank">Início</a>
+    <a href="../atividadejs/atividades.html" target="_blank">Atividades</a>
+</div>
+        <div class="page-wrap">
+            <h1>Briefing</h1>
+            <p class="intro">Este briefing foi criado para entender melhor suas necessidades, objetivos e expectativas. As respostas são essenciais para que o projeto seja desenvolvido de forma estratégica, alinhada ao que você realmente precisa.</p>
+
+            <form id="briefingForm">
+        <div class="field-block">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="field-block">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="field-block">
+            <label for="nascimento">Data de Nascimento</label>
+            <input type="date" name="nascimento" id="nascimento">
+        </div>
+        
+        <div class="field-group">
+            <label>Qual tipo de trabalho deseja contratar?</label>
+            <div class="radio-group">
+                <label class="radio-item" for="identidade-visual">
+                    <input type="radio" name="trabalho" id="identidade-visual" value="Identidade Visual">
+                    Identidade Visual
+                </label>
+                <label class="radio-item" for="carrossel">
+                    <input type="radio" name="trabalho" id="carrossel" value="Carrossel">
+                    Carrossel
+                </label>
+                <label class="radio-item" for="post">
+                    <input type="radio" name="trabalho" id="post" value="Post">
+                    Post
+                </label>
+            </div>
+        </div>
+
+        <div class="field-block">
+            <label for="persona">Qual é a persona?</label>
+            <p class="helper-text">Personas são representações fictícias de pessoas que costumam comprar da sua marca. Elas são compostas por uma série de características pessoais como nome, idade, gênero, interesses e hobbies, que normalmente são focados em grupos compradores de produtos e/ou serviços de uma empresa. A criação de personas é uma etapa fundamental para o desenvolvimento de estratégias de marketing e comunicação eficazes, pois permite que as empresas entendam melhor seu público-alvo e criem mensagens e campanhas mais relevantes e personalizadas.</p>
+            <textarea type="text" id="persona" name="persona" placeholder="Persona"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="Imagemdamarca">Qual imagem a marca quer transmitir?</label>
+            <textarea type="text" id="Imagemdamarca" name="Imagemdamarca" placeholder="Imagem da marca"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="valores">Quais são os valores importantes da empresa</label>
+            <textarea type="text" id="valores" name="valores" placeholder="Valores"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="objetivos">Quais são os objetivos da marca?</label>
+            <textarea type="text" id="objetivos" name="objetivos" placeholder="Objetivos"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="caracteristicas">Quais as principais caracteristicas da marca</label>
+            <textarea type="text" id="caracteristicas" name="caracteristicas" placeholder="Caracteristicas"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="palavraschave">Quais palavras são indicadas para usar e quais não usar</label>
+            <textarea type="text" id="palavraschave" name="palavraschave" placeholder="Palavras-chave"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="cores">Quais cores devem ser usadas e quais devem ser evitadas</label>
+            <textarea type="text" id="cores" name="cores" placeholder="Cores"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="tipografia">Há tipográfia já definida? Há preferências?</label>
+            <textarea type="text" id="tipografia" name="tipografia" placeholder="Tipografia"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="palavrasmarca">Quais palavras definem o que a marca é e o que deseja transmitir</label>
+            <textarea type="text" id="palavrasmarca" name="palavrasmarca" placeholder="Quais são as palavras?"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="concorrentes">Quais são os principais concorrentes da marca?</label>
+            <textarea type="text" id="concorrentes" name="concorrentes" placeholder="Concorrentes"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="referencias">Quais são as referências de design que você gostaria de usar?</label>
+            <a class="link-box" href="https://drive.google.com/drive/u/5/folders/1pYFM5S_2_l2Xi23PmsawzRheyPPXmP3g">Caso tenha imagens, pode anexar clicando aqui!</a>
+            <textarea type="text" id="referencias" name="referencias" placeholder="Referências"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="Manualdemarca">Já existe um manual de marca?</label>
+            <textarea type="text" id="Manualdemarca" name="Manualdemarca" placeholder="Manual de marca"></textarea>
+        </div>
+
+        <div class="field-block">
+            <label for="Slonga">Possui Slogan?</label>
+            <textarea type="text" id="Slonga" name="Slonga" placeholder="Slogan"></textarea>
+        </div>
+
+        
+                <input class="btn-submit" type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+
+    <script src="briefing.js"></script>
+</body>
+</html>

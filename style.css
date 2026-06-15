@@ -16,16 +16,20 @@ body {
     background: radial-gradient(circle at center, #111 0%, #000 100%);
     color: var(--texto);
 }
-/* BASE */
+/* BASE */  
 .fundo {
     min-height: 100vh;
- /* espaço para o topo fixo */
+    padding-top: 80px;
 }
+
 .topo {
     box-sizing: border-box;
-    background: rgb(7, 7, 7);
-    position: sticky;
+    background: rgba(7, 7, 7, 0.98);
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
     display: flex;
     z-index: 1000;
     align-items: center;
@@ -33,9 +37,7 @@ body {
     gap: 50px;
     font-size: 1.6rem;
     color: #ffffff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
+    padding: 20px 16px;
 }
 
 .topo a {
@@ -47,6 +49,12 @@ body {
 .topo a:hover {
     color: #ffbb00;
     transform: translateY(-2px);
+}
+
+.topo a.ativo {
+    color: #ffbb00;
+    border-bottom: 2px solid #ffbb00;
+    padding-bottom: 4px;
 }
 /* ESTRUTURA PADRÃO */
 .estrutura {
@@ -132,6 +140,7 @@ hr {
     justify-content: center;
     gap: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .links-contato a {
@@ -148,7 +157,35 @@ hr {
     color: #000;
     transform: translateY(-4px);
 }
+.querbriefing {
+    margin-top: 30px;
+    font-size: 2.4rem;
+    letter-spacing: -2px;
+    color: var(--secundario);
+}
+.link-briefing {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 10px;
+    font-size: 2.9rem;
+    font-weight: 600;
+}
+.link-briefing a {
+    text-decoration: none;
+    color: var(--destaque);
+    border: 4px solid var(--destaque);
+    padding: 20px 100px;
+    border-radius: 80px;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
 
+.link-briefing a:hover {
+    background: var(--destaque);
+    color: #000;
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(255, 196, 0, 0.25);
+}
 /* RODAPÉ */
 .rodape {
     text-align: center;
